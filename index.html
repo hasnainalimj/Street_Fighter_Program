@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 9</title>
+	<style type="text/css">
+		
+		html { 
+  			background: url(images/bg.jpg) no-repeat center center fixed; 
+  			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;
+		}
+	</style>
+</head>
+	<script type="text/javascript">
+
+		//Function for Delay
+		function sleepFor( sleepDuration ){
+			var now = new Date().getTime();
+			while(new Date().getTime() < now + sleepDuration);
+		}
+
+		sleepFor(1000);
+		console.log("----xxxxx----LET'S PLAY----xxxxx----");
+		sleepFor(1000);
+		console.log("\n*****-------------------------------------KING OF FIGHTER 97-------------------------------------*****")
+		sleepFor(2000);
+		var players = ['Andy','Benimaru','Billy','Blue Marry','Chin','Choi','Chris','Clark','Diamon','Iori','Kim','King','Kyo','Leona','Mai','Orochi','Ralf','Robert','Ryo','Shermie'];
+		console.log("\nPlayers Name : "+players);
+		sleepFor(1000);
+		var playerOne = prompt("Enter Your Player Name.....");
+		sleepFor(2000);
+		for(var i=0; i<=players.length; i++){
+				if(playerOne == players[i]){
+					console.log("\nYour Player Name Is : " + playerOne);
+				}
+			}
+
+		var players = ['Andy','Benimaru','Billy','Blue Marry','Chin','Choi','Chris','Clark','Diamon','Iori','Kim','King','Kyo','Leona','Mai','Orochi','Ralf','Robert','Ryo','Shermie'];
+		var generateRandom = Math.random() * players.length;
+		var roundRandom = Math.round(generateRandom);
+		var opponentPlayer = players[roundRandom];
+		sleepFor(1000);
+		console.log("\nYour Opponent Player Is : " + opponentPlayer);
+		sleepFor(1000);
+		console.log("\n" + playerOne + " VS " + opponentPlayer);
+		sleepFor(1000);
+
+		console.log("\n***----CONTROLS----***");
+		console.log("\nPunch");
+		console.log("\nKick");
+		console.log("\nHadoken");
+		console.log("\nBlock");
+		console.log("\nPower");
+		console.log("\n-----------------------");
+		sleepFor(1000);
+		console.log("\n-------------------------XXX----------------------Fight Start Ready GO-------------------------XXX----------------------");
+
+		var playerOneHealth = 100;
+		var opponentPlayerHealth = 100;
+
+		var attacks = ['Punch','Kick','Hadoken','Block','Power'];
+
+		for (var i=0; i<=100; i++) {
+			
+			if(playerOneHealth==0 || opponentPlayerHealth==0){
+				break;
+			}
+
+			else{
+
+				var attacks = ['Punch','Kick','Hadoken','Block','Power'];
+				var generateRandomAttack = Math.random() * attacks.length;
+				var roundRandomAttack = Math.floor(generateRandomAttack);
+				var playerOneAttack = prompt("Enter Your Attack.....");			
+				var opponentPlayerAttack = attacks[roundRandomAttack];
+			
+				if(playerOneAttack == 'Punch' && opponentPlayerAttack == 'Block'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					sleepFor(1000);
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Kick' && opponentPlayerAttack == 'Block'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Block' && opponentPlayerAttack == 'Block'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Hadoken' && opponentPlayerAttack == 'Block'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Power' && opponentPlayerAttack == 'Block'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Punch' && opponentPlayerAttack == 'Punch'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-10;
+					opponentPlayerHealth = opponentPlayerHealth-10;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Kick' && opponentPlayerAttack == 'Punch'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-10;
+					opponentPlayerHealth = opponentPlayerHealth-10;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Block' && opponentPlayerAttack == 'Punch'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Hadoken' && opponentPlayerAttack == 'Punch'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-10;
+					opponentPlayerHealth = opponentPlayerHealth-15;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Power' && opponentPlayerAttack == 'Punch'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-10;
+					opponentPlayerHealth = opponentPlayerHealth-30;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Punch' && opponentPlayerAttack == 'Kick'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-10;
+					opponentPlayerHealth = opponentPlayerHealth-10;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Kick' && opponentPlayerAttack == 'Kick'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-10;
+					opponentPlayerHealth = opponentPlayerHealth-10;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Block' && opponentPlayerAttack == 'Kick'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Hadoken' && opponentPlayerAttack == 'Kick'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-10;
+					opponentPlayerHealth = opponentPlayerHealth-15;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Power' && opponentPlayerAttack == 'Kick'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-10;
+					opponentPlayerHealth = opponentPlayerHealth-30;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Punch' && opponentPlayerAttack == 'Hadoken'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-15;
+					opponentPlayerHealth = opponentPlayerHealth-10;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Kick' && opponentPlayerAttack == 'Hadoken'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-15;
+					opponentPlayerHealth = opponentPlayerHealth-10;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Block' && opponentPlayerAttack == 'Hadoken'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Hadoken' && opponentPlayerAttack == 'Hadoken'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-15;
+					opponentPlayerHealth = opponentPlayerHealth-15;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Power' && opponentPlayerAttack == 'Hadoken'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-15;
+					opponentPlayerHealth = opponentPlayerHealth-30;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Punch' && opponentPlayerAttack == 'Power'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-30;
+					opponentPlayerHealth = opponentPlayerHealth-10;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Kick' && opponentPlayerAttack == 'Power'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-30;
+					opponentPlayerHealth = opponentPlayerHealth-10;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Block' && opponentPlayerAttack == 'Power'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Hadoken' && opponentPlayerAttack == 'Power'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-30;
+					opponentPlayerHealth = opponentPlayerHealth-15;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+
+				else if(playerOneAttack == 'Power' && opponentPlayerAttack == 'Power'){
+					sleepFor(1000);
+					console.log("\n----------------------------------------------------------");
+					console.log("\n" + playerOne + " Attacked " + playerOneAttack);
+					sleepFor(1000);
+					console.log("\n" + opponentPlayer + " Attacked " + opponentPlayerAttack);
+					console.log("\n----------------------------------------------------------");
+					playerOneHealth = playerOneHealth-30;
+					opponentPlayerHealth = opponentPlayerHealth-30;
+					console.log("\n" + playerOne + " Health : " + playerOneHealth + "%");
+					console.log("\n" + opponentPlayer + " Health : " + opponentPlayerHealth + "%");
+				}
+			}
+		}
+
+		if(playerOneHealth>opponentPlayerHealth){
+			console.log("\n---------------------------------------------------------------------------");
+			console.log("\nWINNER IS : " + playerOne);
+			console.log("\n---------------------------------------------------------------------------");
+		}
+		else if(playerOneHealth<opponentPlayerHealth){
+			console.log("\n---------------------------------------------------------------------------");
+			console.log("\nWINNER IS : " + opponentPlayer);
+			console.log("\n---------------------------------------------------------------------------");
+		}
+		else{
+			console.log("\n---------------------------------------------------------------------------");
+			console.log("\nDRAW");
+			console.log("\n---------------------------------------------------------------------------");
+		}
+
+	</script>
